@@ -10,7 +10,7 @@ class UserModel {
      */
     public function verifyUser($username, $password) {
         $db = Database::getInstance();
-        $stmt = $db->prepare("SELECT id, password FROM users WHERE username = :username");
+        $stmt = $db->prepare("SELECT id, password, username FROM users WHERE username = :username");
         $stmt->execute(['username' => $username]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -25,6 +25,7 @@ class UserModel {
      * Change password for a user
      */
     public function changePassword($userId, $newPassword) {
+        // Manually check the hash
         $db = Database::getInstance();
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
         $stmt = $db->prepare("UPDATE users SET password = :newPassword WHERE id = :userId");

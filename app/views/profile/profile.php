@@ -20,6 +20,14 @@
 
         <!-- Form to update password -->
         <form action="/profile/changePassword" method="post">
+            <?php 
+            if (isset($_GET['error'])) {
+                echo '<p style="color:red;">' . htmlspecialchars($_GET['error']) . '</p>';
+            }
+            if (isset($_GET['success'])) {
+                echo '<p style="color:green;">' . htmlspecialchars($_GET['success']) . '</p>';
+            }
+            ?>
             <div class="form-group">
                 <label for="currentPassword">Current Password:</label>
                 <input type="password" id="currentPassword" name="currentPassword" class="form-control" required>
@@ -32,8 +40,6 @@
                 <label for="confirmNewPassword">Confirm New Password:</label>
                 <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="form-control" required>
             </div>
-            
-            <!-- Submit button -->
             <button type="submit" class="btn btn-primary">Update Password</button>
         </form>
     </div>

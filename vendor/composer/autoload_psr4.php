@@ -6,6 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
+    'NetSuite\\' => array($vendorDir . '/ryanwinchester/netsuite-php/src'),
     'Core\\' => array($baseDir . '/Core'),
     'App\\' => array($baseDir . '/app'),
 );

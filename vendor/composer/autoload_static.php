@@ -6,7 +6,19 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6bf4a85ec06e2bef2312416526230475
 {
+    public static $files = array (
+        'f18b4a7ee5d17c2a8f7a49d2f01d3dc0' => __DIR__ . '/..' . '/ryanwinchester/netsuite-php/src/includes/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
+        'N' => 
+        array (
+            'NetSuite\\' => 9,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
@@ -18,6 +30,14 @@ class ComposerStaticInit6bf4a85ec06e2bef2312416526230475
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'NetSuite\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ryanwinchester/netsuite-php/src',
+        ),
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Core',

@@ -17,15 +17,17 @@ class ShopifyModel {
     /**
      * Update Shopify settings for a user
      */
-    public function updateSettings($userId, $domainName, $apiKey, $apiSecretKey) {
+    public function updateSettings($userId, $domainName, $apiKey, $apiSecretKey, $webhook) {
         $db = Database::getInstance();
-        $stmt = $db->prepare("UPDATE shopify_settings SET domain_name = :domainName, api_key = :apiKey, api_secret_key = :apiSecretKey WHERE user_id = :userId");
+        $stmt = $db->prepare("UPDATE shopify_settings SET domain_name = :domainName, api_key = :apiKey, api_secret_key = :apiSecretKey, webhook = :webhook WHERE user_id = :userId");
         $stmt->execute([
             'userId' => $userId,
             'domainName' => $domainName,
             'apiKey' => $apiKey,
-            'apiSecretKey' => $apiSecretKey
+            'apiSecretKey' => $apiSecretKey,
+            'webhook' => $webhook
         ]);
         return $stmt->rowCount();
     }
+
 }

@@ -24,6 +24,7 @@ class LoginController extends Controller {
             if ($user) {
                 session_regenerate_id(true); // Regenerate session ID
                 $_SESSION['user_id'] = $user['id']; // Store user ID in session
+                $_SESSION['username'] = $user['username']; // Store the username in session
                 $_SESSION['is_authenticated'] = true; // Flag session as authenticated
                 $this->redirect('/profile'); // Redirect to the profile page if successful
             } else {

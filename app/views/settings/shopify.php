@@ -34,6 +34,10 @@
                 <label for="apiSecretKey">Shopify API Secret Key:</label>
                 <input type="text" id="apiSecretKey" name="apiSecretKey" value="<?php echo $settings['api_secret_key']; ?>" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="webhook">Shopify Webhook:</label>
+                <input type="text" id="webhook" name="webhook" value="<?php echo $settings['webhook']; ?>" class="form-control" required>
+            </div>
             
             <!-- Submit button -->
             <button type="submit" class="btn btn-primary">Update Settings</button>

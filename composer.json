@@ -4,5 +4,8 @@
             "App\\": "app/",
             "Core\\": "Core/"
         }
+    },
+    "require": {
+        "ryanwinchester/netsuite-php": "^2024.2"
     }
 }

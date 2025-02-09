@@ -27,6 +27,7 @@ $router->add('/settings/netsuite/update', ['controller' => 'NetSuiteController',
 $router->add('/mapping', ['controller' => 'MappingController', 'action' => 'index', 'protected' => true]);
 $router->add('/cron', ['controller' => 'CronController', 'action' => 'run', 'protected' => false]);
 $router->add('/logout', ['controller' => 'LoginController', 'action' => 'logout', 'protected' => true]);
+$router->add('/shopify_webhook', ['controller' => 'ShopifyController', 'action' => 'handleWebhook', 'protected' => false]);
 
 
 // Dispatch the route
