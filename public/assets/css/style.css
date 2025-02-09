@@ -1,0 +1,155 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Using Google Fonts */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ece9e6, #ffffff); /* Subtle gradient */
+    color: #333;
+}
+
+/* Container for centered layout */
+.container {
+    width: 90%;
+    max-width: 400px; /* Better control for form width */
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Header styles */
+h1 {
+    color: #5cb85c; /* Vibrant green */
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #5cb85c; /* Focus color matches button */
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.5); /* Soft glow */
+}
+
+/* Button styling */
+button {
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%; /* Full-width button */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Utility classes for validation */
+.is-invalid {
+    border-color: #ff4136; /* Bright red for errors */
+}
+
+/* Flash message styling */
+#msg-flash {
+    padding: 10px;
+    background-color: #ff4136; /* Red for errors */
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #2ecc71; /* Soft green for success messages */
+    color: white;
+}
+
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/* Error page specific styles */
+.container h1 {
+    color: #FF6347; /* Using a tomato color for headers */
+}
+
+.container p {
+    font-size: 16px;
+    color: #333;
+}
+
+.container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+/* Add a padding to the bottom of the document to prevent content from being hidden below the nav */
+body {
+    padding-top: 50px;
+}
