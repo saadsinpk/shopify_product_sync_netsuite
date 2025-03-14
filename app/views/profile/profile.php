@@ -10,6 +10,7 @@
         <ul class="navbar">
             <li><a href="/profile">Profile</a></li>
             <li><a href="/settings/shopify">Shopify Settings</a></li>
+            <li><a href="/webhook_list">Logs</a></li>
             <li><a href="/settings/netsuite">NetSuite Settings</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>

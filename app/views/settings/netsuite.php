@@ -11,6 +11,7 @@
         <ul class="navbar">
             <li><a href="/profile">Profile</a></li>
             <li><a href="/settings/shopify">Shopify Settings</a></li>
+            <li><a href="/webhook_list">Logs</a></li>
             <li><a href="/settings/netsuite">NetSuite Settings</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
@@ -34,6 +35,14 @@
             <div class="form-group">
                 <label for="tokenSecret">NetSuite Token Secret:</label>
                 <input type="text" id="tokenSecret" name="tokenSecret" value="<?php echo $settings['token_secret']; ?>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="tokenSecret">NetSuite Consumer Key:</label>
+                <input type="text" id="consumer_key" name="consumer_key" value="<?php echo $settings['consumer_key']; ?>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="tokenSecret">NetSuite Consumer Secret:</label>
+                <input type="text" id="consumer_secret" name="consumer_secret" value="<?php echo $settings['consumer_secret']; ?>" class="form-control">
             </div>
             
             <!-- Submit button -->

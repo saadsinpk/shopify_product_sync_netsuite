@@ -1,0 +1,30 @@
+[11-Mar-2025 23:47:04 UTC] PHP Warning:  Attempt to read property "sku" on string in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php on line 74
+[12-Mar-2025 09:00:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\xBB\xBFVid...' for column `feuusbzvwj`.`shopify_webhook_queue`.`data` at row 1 in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookQueueModel.php:26
+Stack trace:
+#0 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookQueueModel.php(26): PDOStatement->execute()
+#1 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php(453): App\Models\ShopifyWebhookQueueModel->saveWebhookQueue()
+#2 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(56): App\Controllers\ShopifyController->handleWebhookAction()
+#3 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(27): Core\Router->invokeControllerAction()
+#4 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/public/index.php(38): Core\Router->dispatch()
+#5 {main}
+  thrown in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookQueueModel.php on line 26
+[13-Mar-2025 03:49:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php:26
+Stack trace:
+#0 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php(26): PDOStatement->execute()
+#1 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php(785): App\Models\ShopifyWebhookModel->saveWebhook()
+#2 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php(559): App\Controllers\ShopifyController->createNetSuiteSalesOrderFromShopify()
+#3 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(56): App\Controllers\ShopifyController->ShopifyHandleWebhookCronJobAction()
+#4 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(27): Core\Router->invokeControllerAction()
+#5 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/public/index.php(38): Core\Router->dispatch()
+#6 {main}
+  thrown in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php on line 26
+[13-Mar-2025 11:38:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php:26
+Stack trace:
+#0 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php(26): PDOStatement->execute()
+#1 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php(785): App\Models\ShopifyWebhookModel->saveWebhook()
+#2 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Controllers/ShopifyController.php(559): App\Controllers\ShopifyController->createNetSuiteSalesOrderFromShopify()
+#3 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(56): App\Controllers\ShopifyController->ShopifyHandleWebhookCronJobAction()
+#4 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/Core/Router.php(27): Core\Router->invokeControllerAction()
+#5 /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/public/index.php(38): Core\Router->dispatch()
+#6 {main}
+  thrown in /home/1410338.cloudwaysapps.com/feuusbzvwj/public_html/app/Models/ShopifyWebhookModel.php on line 26

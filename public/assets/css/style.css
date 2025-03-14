@@ -11,7 +11,7 @@ body {
 /* Container for centered layout */
 .container {
     width: 90%;
-    max-width: 400px; /* Better control for form width */
+    max-width: 1200px; /* Better control for form width */
     margin: 50px auto;
     overflow: hidden;
     padding: 20px;

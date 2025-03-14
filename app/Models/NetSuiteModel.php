@@ -17,14 +17,16 @@ class NetSuiteModel {
     /**
      * Update NetSuite settings for a user
      */
-    public function updateSettings($userId, $accountId, $tokenId, $tokenSecret) {
+    public function updateSettings($userId, $accountId, $tokenId, $tokenSecret, $consumerKey, $consumerSecret) {
         $db = Database::getInstance();
-        $stmt = $db->prepare("UPDATE netsuite_settings SET account_id = :accountId, token_id = :tokenId, token_secret = :tokenSecret WHERE user_id = :userId");
+        $stmt = $db->prepare("UPDATE netsuite_settings SET account_id = :accountId, token_id = :tokenId, token_secret = :tokenSecret, consumer_key = :consumerKey, consumer_secret = :consumerSecret WHERE user_id = :userId");
         $stmt->execute([
             'userId' => $userId,
             'accountId' => $accountId,
             'tokenId' => $tokenId,
-            'tokenSecret' => $tokenSecret
+            'tokenSecret' => $tokenSecret,
+            'consumerKey' => $consumerKey,
+            'consumerSecret' => $consumerSecret
         ]);
         return $stmt->rowCount();
     }
